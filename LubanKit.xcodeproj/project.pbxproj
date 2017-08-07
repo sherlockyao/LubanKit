@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16855D0D1F33213200A919EC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16855D0C1F33213200A919EC /* Stack.swift */; };
 		169379D21F31ACC700F5A873 /* LubanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169379C81F31ACC700F5A873 /* LubanKit.framework */; };
 		169379D71F31ACC700F5A873 /* LubanKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169379D61F31ACC700F5A873 /* LubanKitTests.swift */; };
 		169379D91F31ACC700F5A873 /* LubanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 169379CB1F31ACC700F5A873 /* LubanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		169379E31F31AE9100F5A873 /* Lookinside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169379E21F31AE9100F5A873 /* Lookinside.swift */; };
+		16DF3A121F3853AD00D01161 /* LookinsideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DF3A111F3853AD00D01161 /* LookinsideTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16855D0C1F33213200A919EC /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		169379C81F31ACC700F5A873 /* LubanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LubanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		169379CB1F31ACC700F5A873 /* LubanKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LubanKit.h; sourceTree = "<group>"; };
 		169379CC1F31ACC700F5A873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169379D11F31ACC700F5A873 /* LubanKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LubanKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		169379D61F31ACC700F5A873 /* LubanKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LubanKitTests.swift; sourceTree = "<group>"; };
 		169379D81F31ACC700F5A873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		169379E21F31AE9100F5A873 /* Lookinside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lookinside.swift; sourceTree = "<group>"; };
+		16DF3A111F3853AD00D01161 /* LookinsideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookinsideTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,8 @@
 			children = (
 				169379CB1F31ACC700F5A873 /* LubanKit.h */,
 				169379CC1F31ACC700F5A873 /* Info.plist */,
+				169379E21F31AE9100F5A873 /* Lookinside.swift */,
+				16855D0C1F33213200A919EC /* Stack.swift */,
 			);
 			path = LubanKit;
 			sourceTree = "<group>";
@@ -81,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				169379D61F31ACC700F5A873 /* LubanKitTests.swift */,
+				16DF3A111F3853AD00D01161 /* LookinsideTests.swift */,
 				169379D81F31ACC700F5A873 /* Info.plist */,
 			);
 			path = LubanKitTests;
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					169379C71F31ACC700F5A873 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					169379D01F31ACC700F5A873 = {
@@ -196,6 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16855D0D1F33213200A919EC /* Stack.swift in Sources */,
+				169379E31F31AE9100F5A873 /* Lookinside.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DF3A121F3853AD00D01161 /* LookinsideTests.swift in Sources */,
 				169379D71F31ACC700F5A873 /* LubanKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +335,7 @@
 		169379DD1F31ACC700F5A873 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -333,6 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sherlockyao.LubanKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -340,6 +355,7 @@
 		169379DE1F31ACC700F5A873 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -358,6 +374,7 @@
 		169379E01F31ACC700F5A873 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LubanKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sherlockyao.LubanKitTests;
@@ -369,6 +386,7 @@
 		169379E11F31ACC700F5A873 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LubanKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sherlockyao.LubanKitTests;
@@ -396,6 +414,7 @@
 				169379DE1F31ACC700F5A873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		169379DF1F31ACC700F5A873 /* Build configuration list for PBXNativeTarget "LubanKitTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +423,7 @@
 				169379E11F31ACC700F5A873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
