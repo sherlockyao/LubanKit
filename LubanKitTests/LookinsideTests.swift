@@ -18,17 +18,17 @@ class LookinsideTests: XCTestCase {
         subview.tag = 456
         
         lookinside(view) { 
-            assert(123 == container()!.tag)
+            XCTAssertTrue(123 == container()!.tag)
             
-            lookinside(subview, block: { 
-                assert(456 == container()!.tag)
-            })
+            lookinside(subview) {
+                XCTAssertTrue(456 == container()!.tag)
+            }
             
-            assert(123 == container()!.tag)
+            XCTAssertTrue(123 == container()!.tag)
         }
         
-        assert(nil == container())
+        XCTAssertTrue(nil == container())
     }
-
+    
 }
 

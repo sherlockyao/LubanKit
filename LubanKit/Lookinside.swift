@@ -19,3 +19,30 @@ public func lookinside(_ view: UIView, block: () -> ()) {
 internal func container() -> UIView? {
     return viewStack.top
 }
+
+
+fileprivate enum Axis {
+    case horizontal, vertical
+}
+
+fileprivate var axisStack = Stack<Axis>()
+
+public func horizontal(block: () -> ()) {
+    axisStack.push(.horizontal)
+    block()
+    axisStack.pop()
+}
+
+public func vertical(block: () -> ()) {
+    axisStack.push(.vertical)
+    block()
+    axisStack.pop()
+}
+
+internal func xaxis() -> Bool {
+    guard let axis = axisStack.top else {
+        return true
+    }
+    
+    return axis == .horizontal
+}

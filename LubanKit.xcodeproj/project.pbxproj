@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		16855D0D1F33213200A919EC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16855D0C1F33213200A919EC /* Stack.swift */; };
+		168D200F1F39BE4B0009A179 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D200E1F39BE4B0009A179 /* Size.swift */; };
+		168D20111F39BFC50009A179 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D20101F39BFC50009A179 /* Constraint.swift */; };
+		168D20131F39D1730009A179 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D20121F39D1730009A179 /* ViewUtils.swift */; };
 		169379D21F31ACC700F5A873 /* LubanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169379C81F31ACC700F5A873 /* LubanKit.framework */; };
 		169379D71F31ACC700F5A873 /* LubanKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169379D61F31ACC700F5A873 /* LubanKitTests.swift */; };
 		169379D91F31ACC700F5A873 /* LubanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 169379CB1F31ACC700F5A873 /* LubanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		169379E31F31AE9100F5A873 /* Lookinside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169379E21F31AE9100F5A873 /* Lookinside.swift */; };
 		16DF3A121F3853AD00D01161 /* LookinsideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DF3A111F3853AD00D01161 /* LookinsideTests.swift */; };
+		16DF3A141F385DC800D01161 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DF3A131F385DC800D01161 /* Spacing.swift */; };
+		16DF3A161F387E2B00D01161 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DF3A151F387E2B00D01161 /* Alignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		16855D0C1F33213200A919EC /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		168D200E1F39BE4B0009A179 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		168D20101F39BFC50009A179 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		168D20121F39D1730009A179 /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		169379C81F31ACC700F5A873 /* LubanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LubanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		169379CB1F31ACC700F5A873 /* LubanKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LubanKit.h; sourceTree = "<group>"; };
 		169379CC1F31ACC700F5A873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +43,8 @@
 		169379D81F31ACC700F5A873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169379E21F31AE9100F5A873 /* Lookinside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lookinside.swift; sourceTree = "<group>"; };
 		16DF3A111F3853AD00D01161 /* LookinsideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookinsideTests.swift; sourceTree = "<group>"; };
+		16DF3A131F385DC800D01161 /* Spacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		16DF3A151F387E2B00D01161 /* Alignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +89,13 @@
 			children = (
 				169379CB1F31ACC700F5A873 /* LubanKit.h */,
 				169379CC1F31ACC700F5A873 /* Info.plist */,
+				168D20101F39BFC50009A179 /* Constraint.swift */,
 				169379E21F31AE9100F5A873 /* Lookinside.swift */,
+				168D200E1F39BE4B0009A179 /* Size.swift */,
+				16DF3A131F385DC800D01161 /* Spacing.swift */,
+				16DF3A151F387E2B00D01161 /* Alignment.swift */,
 				16855D0C1F33213200A919EC /* Stack.swift */,
+				168D20121F39D1730009A179 /* ViewUtils.swift */,
 			);
 			path = LubanKit;
 			sourceTree = "<group>";
@@ -206,8 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168D20131F39D1730009A179 /* ViewUtils.swift in Sources */,
+				168D20111F39BFC50009A179 /* Constraint.swift in Sources */,
 				16855D0D1F33213200A919EC /* Stack.swift in Sources */,
+				168D200F1F39BE4B0009A179 /* Size.swift in Sources */,
+				16DF3A161F387E2B00D01161 /* Alignment.swift in Sources */,
 				169379E31F31AE9100F5A873 /* Lookinside.swift in Sources */,
+				16DF3A141F385DC800D01161 /* Spacing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

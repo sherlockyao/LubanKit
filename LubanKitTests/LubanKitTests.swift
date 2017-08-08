@@ -22,8 +22,40 @@ class LubanKitTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let contentView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 300))
+        let avatarImageView = UIView(frame: .zero)
+        avatarImageView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(avatarImageView)
+        let titleLabel = UILabel(frame: .zero)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(titleLabel)
+        let subtitleLabel = UILabel(frame: .zero)
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(subtitleLabel)
+        
+        lookinside(contentView) {
+            horizontal {
+                12 <-- avatarImageView.space(100) --- 8 --- titleLabel --> 12
+                
+                titleLabel.head == subtitleLabel.head
+                titleLabel.tail == subtitleLabel.tail
+            }
+            
+            vertical {
+                titleLabel.space(21) --- 3 --- subtitleLabel.space(21)
+                
+                avatarImageView.shape == square
+                avatarImageView.middle == middleline
+                avatarImageView.head == titleLabel.head
+            }
+        }
+        
+        contentView.setNeedsLayout()
+        contentView.layoutIfNeeded()
+        
+        XCTAssertTrue(avatarImageView.frame == CGRect(x: 12, y: 100, width: 100, height: 100))
+        XCTAssertTrue(titleLabel.frame == CGRect(x: 120, y: 100, width: 188, height: 21))
+        XCTAssertTrue(subtitleLabel.frame == CGRect(x: 120, y: 124, width: 188, height: 21))
     }
     
     func testPerformanceExample() {
