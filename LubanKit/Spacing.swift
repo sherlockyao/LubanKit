@@ -55,4 +55,9 @@ public extension UIView {
         }
         return self
     }
+    
+    public func square(_ pt: Float) -> UIView {
+        Constraint.squarely(self)
+        return self.space(pt)
+    }
 }

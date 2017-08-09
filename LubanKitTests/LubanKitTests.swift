@@ -35,7 +35,7 @@ class LubanKitTests: XCTestCase {
         
         lookinside(contentView) {
             horizontal {
-                12 <-- avatarImageView.space(100) --- 8 --- titleLabel --> 12
+                12 <-- avatarImageView.square(100) --- 8 --- titleLabel --> 12
                 
                 titleLabel.head == subtitleLabel.head
                 titleLabel.tail == subtitleLabel.tail
@@ -44,7 +44,6 @@ class LubanKitTests: XCTestCase {
             vertical {
                 titleLabel.space(21) --- 3 --- subtitleLabel.space(21)
                 
-                avatarImageView.shape == square
                 avatarImageView.middle == middleline
                 avatarImageView.head == titleLabel.head
             }
